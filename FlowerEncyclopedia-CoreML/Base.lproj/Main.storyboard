@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o4D-sP-VkM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="qI9-W5-PIl">
+            <objects>
+                <viewController id="wii-S3-Yud" customClass="ViewController" customModule="WhatFlower" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xkS-tK-OEj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ymo-Fp-Q32">
+                                <rect key="frame" x="0.0" y="88" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ymo-Fp-Q32" secondAttribute="height" multiplier="1:1" id="nHT-Gq-HlO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="yFF-Nw-Ja1">
+                                <rect key="frame" x="16" y="521" width="382" height="321"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0fA-EU-mUA"/>
+                        <color key="backgroundColor" red="0.0" green="0.56470588239999997" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ymo-Fp-Q32" firstAttribute="trailing" secondItem="0fA-EU-mUA" secondAttribute="trailing" id="0ZL-dz-mqV"/>
+                            <constraint firstItem="yFF-Nw-Ja1" firstAttribute="leading" secondItem="0fA-EU-mUA" secondAttribute="leading" constant="16" id="HPO-xT-deR"/>
+                            <constraint firstItem="0fA-EU-mUA" firstAttribute="bottom" secondItem="yFF-Nw-Ja1" secondAttribute="bottom" constant="20" id="LWc-ac-UkR"/>
+                            <constraint firstItem="Ymo-Fp-Q32" firstAttribute="leading" secondItem="0fA-EU-mUA" secondAttribute="leading" id="Y5y-Tz-lpr"/>
+                            <constraint firstItem="Ymo-Fp-Q32" firstAttribute="top" secondItem="0fA-EU-mUA" secondAttribute="top" id="dOf-Xh-vRS"/>
+                            <constraint firstItem="0fA-EU-mUA" firstAttribute="trailing" secondItem="yFF-Nw-Ja1" secondAttribute="trailing" constant="16" id="mFr-dv-Bsx"/>
+                            <constraint firstItem="yFF-Nw-Ja1" firstAttribute="top" secondItem="Ymo-Fp-Q32" secondAttribute="bottom" constant="19" id="nfU-d2-a1a"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="94m-SG-Uh6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="CQO-T0-mgP">
+                            <color key="tintColor" systemColor="systemGreenColor"/>
+                            <connections>
+                                <action selector="cameraBtnPressed:" destination="wii-S3-Yud" id="Lpk-bW-dhe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="Ymo-Fp-Q32" id="63n-FI-Nya"/>
+                        <outlet property="label" destination="yFF-Nw-Ja1" id="Mty-hR-hx1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93P-tP-6GF" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EXk-MD-L7X">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o4D-sP-VkM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pA3-V7-xpp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.1960784314" green="0.74509803919999995" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wii-S3-Yud" kind="relationship" relationship="rootViewController" id="hbC-fP-0GZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEg-xQ-L1P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
